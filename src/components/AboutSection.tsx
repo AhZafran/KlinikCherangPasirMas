@@ -30,9 +30,9 @@ export default function AboutSection() {
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
               Komited Terhadap Kesihatan Anda
             </h2>
-            <p className="text-muted-foreground mb-4 leading-relaxed">
+            <p className="text-muted-foreground mb-4 leading-relaxed text-justify">
               Klinik Primer Cherang Pasir Mas diuruskan oleh{" "}
-              <strong>Dr. Nur Liyana Binti Kamaruddin</strong> bersama pasukan
+              <strong>Dr. Nur Liyana & Dr Hafiz</strong> bersama pasukan
               doktor perubatan yang berpengalaman. Kami menawarkan perkhidmatan
               pesakit luar yang komprehensif kepada penduduk Pasir Mas. Pasukan
               perubatan kami berpengalaman dalam merawat masalah kesakitan
@@ -41,7 +41,7 @@ export default function AboutSection() {
               klinikal yang terbukti berkesan untuk membantu pesakit menurunkan
               berat badan secara selamat.
             </p>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
+            <p className="text-muted-foreground mb-8 leading-relaxed text-justify">
               Fokus kami adalah pada rawatan berasaskan kajian klinikal,
               pemulihan fungsi, dan meningkatkan kualiti hidup setiap pesakit
               melalui bimbingan perubatan yang menyeluruh dan berterusan.

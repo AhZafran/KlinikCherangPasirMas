@@ -16,7 +16,7 @@ export default function HeroSection() {
               Pusat Rawatan Saraf, Sendi, Post-Stroke dan Diet Klinikal
             </h1>
 
-            <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-lg leading-relaxed">
+            <p className="text-base sm:text-lg text-muted-foreground mb-10 max-w-lg leading-relaxed text-justify">
               <strong className="text-foreground">
                 Klinik Primer Cherang Clinic Pasir Mas
               </strong>
