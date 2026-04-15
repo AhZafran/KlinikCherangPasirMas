@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -12,11 +12,32 @@ const images = [
   { src: "/galleri/5.jpeg", alt: "Galeri Klinik Primer Cherang 5" },
 ];
 
-const VISIBLE = 3;
+const GAP = 16;
+
+function useVisibleCount() {
+  const [count, setCount] = useState(3);
+
+  useEffect(() => {
+    function update() {
+      setCount(window.innerWidth < 768 ? 1 : 3);
+    }
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  return count;
+}
 
 export default function GallerySection() {
+  const visible = useVisibleCount();
   const [startIndex, setStartIndex] = useState(0);
-  const maxIndex = images.length - VISIBLE;
+  const maxIndex = images.length - visible;
+
+  // Reset index when visible count changes
+  useEffect(() => {
+    setStartIndex((i) => Math.min(i, maxIndex));
+  }, [maxIndex]);
 
   const prev = useCallback(() => {
     setStartIndex((i) => Math.max(0, i - 1));
@@ -50,15 +71,17 @@ export default function GallerySection() {
             <div
               className="flex transition-transform duration-500 ease-in-out"
               style={{
-                gap: "16px",
-                transform: `translateX(calc(-${startIndex} * (100% / ${VISIBLE} + 16px * ${VISIBLE - 1} / ${VISIBLE})))`,
+                gap: `${GAP}px`,
+                transform: `translateX(calc(-${startIndex} * (100% / ${visible} + ${GAP}px * ${visible - 1} / ${visible})))`,
               }}
             >
               {images.map((image, index) => (
                 <div
                   key={index}
                   className="relative flex-shrink-0 rounded-2xl overflow-hidden"
-                  style={{ width: `calc((100% - ${(VISIBLE - 1) * 16}px) / ${VISIBLE})` }}
+                  style={{
+                    width: `calc((100% - ${(visible - 1) * GAP}px) / ${visible})`,
+                  }}
                 >
                   <div className="relative aspect-[4/3]">
                     <Image

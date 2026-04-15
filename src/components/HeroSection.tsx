@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="bg-white py-16 sm:py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-[1fr_1.4fr] gap-10 lg:gap-12 items-center">
           {/* Text side */}
           <div>
             <p className="text-sm sm:text-base text-muted-foreground mb-4">
@@ -52,18 +52,21 @@ export default function HeroSection() {
             <div className="rounded-3xl overflow-hidden shadow-lg border border-border/50 relative">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/Drs/DrsPSM.png"
+                src="/Drs/DrsPSM.webp"
                 alt="Doktor Klinik Primer Cherang Clinic Pasir Mas"
                 className="w-full h-auto"
               />
               {/* Doctor labels */}
-              <span className="absolute bottom-[18%] left-[12%] bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-foreground px-3 py-1 rounded-full shadow-md">
+              <span className="absolute bottom-[8%] left-[8%] bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-foreground px-3 py-1 rounded-full shadow-md">
                 Dr. Suhaila
               </span>
-              <span className="absolute bottom-[38%] left-1/2 -translate-x-1/2 bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-foreground px-3 py-1 rounded-full shadow-md">
+              <span className="absolute bottom-[8%] left-[30%] bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-foreground px-3 py-1 rounded-full shadow-md">
                 Dr. Liyana
               </span>
-              <span className="absolute bottom-[18%] right-[10%] bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-foreground px-3 py-1 rounded-full shadow-md">
+              <span className="absolute bottom-[8%] right-[28%] bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-foreground px-3 py-1 rounded-full shadow-md">
+                Dr. Aina
+              </span>
+              <span className="absolute bottom-[8%] right-[6%] bg-white/90 backdrop-blur-sm text-xs sm:text-sm font-semibold text-foreground px-3 py-1 rounded-full shadow-md">
                 Dr. Hafiz
               </span>
             </div>
