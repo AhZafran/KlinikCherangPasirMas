@@ -24,7 +24,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className={cn(
               buttonVariants({ size: "default" }),
-              "bg-white hover:bg-white/90 text-[#8b0810] font-semibold gap-2"
+              "bg-white [a]:hover:bg-white/90 text-[#8b0810] font-semibold gap-2"
             )}
           >
             <Phone className="h-4 w-4" />
